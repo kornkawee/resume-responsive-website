@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  /* font */
+  --primary-font: "Poppins", sans-serif, "Kanit", sans-serif;
+  /* bg-color */
+  --bg-light-blue: lightblue;
+  --bg-dark-blue: #003147;
+  --bg-white: #fff;
+  --bg-light: #f0f0f0;
+  --bg-red: #f00;
+  --bg-black: #081921;
+  --bg-blue: #03a9f4;
+
+  /* font-color */
+  --text-white: #fff;
+  --text-blue: #03a9f4;
+  --text-blue-pas: #2a7da2;
+  --text-dark: #333;
+  --text-dark-blue: #003147;
+  --text-gray: #848c90;
+  --text-gray-2: #848c99;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+}
+
+body {
+  background: var(--bg-light-blue);
+  display: flex;
+  /* แนวนอน */
+  justify-content: center;
+  /* แนวตั้ง */
+  align-items: center;
+  /* ควาสูงต่ำสุด */
+  min-height: 100vh;
+}
+
+.container-resume {
+  position: relative;
+  width: 100%;
+  /* ควากว้างสูงสุด  */
+  max-width: 1000px;
+  /* ควาสูงต่ำสุด */
+  min-height: 1000px;
+  background: var(--bg-white);
+  margin: 50px;
+
+  /* X Y blur size color */
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================================
+                        left_Side 
+=========================================================== */
+.container-resume .left_side {
+  position: relative;
+  background: var(--bg-dark-blue);
+  padding: 40px 30px;
+}
+
+/* profileText */
+.profileText {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* แนวตั้ง */
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profileText .imgBx {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 2px solid white; */
+}
+.profileText .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profileText h2 {
+  color: var(--text-white);
+  font-size: 1.25rem;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4rem;
+}
+.profileText span {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* contactInfo */
+.contactInfo {
+  padding-top: 40px;
+}
+.title {
+  color: var(--text-white);
+  text-transform: uppercase;
+  font-size: 1.175rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.contactInfo ul {
+  position: relative;
+  padding: 0;
+}
+.contactInfo ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.contactInfo ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: var(--text-blue);
+}
+.contactInfo ul li span {
+  color: var(--text-white);
+  font-weight: 300;
+}
+
+/* education */
+.contactInfo.education li {
+  margin-bottom: 15px;
+}
+.contactInfo.education h5 {
+  color: var(--text-blue);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.contactInfo.education h4 {
+  color: var(--text-white);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.contactInfo.education h4 span {
+  color: var(--text-white);
+  font-size: 1rem;
+  font-weight: 500;
+}
+/* ปรับแต่ง h4 ตัวแรก ไม่ใช้ลูกตัวที่ 2 */
+/* .contactInfo.education h4:nth-child(2) {
+  font-size: 1.125rem;
+  font-weight: 500;
+} */
+
+/* language */
+.contactInfo.language .percent {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: var(--bg-black);
+  display: block;
+  margin-top: 5px;
+}
+.contactInfo.language .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--bg-blue);
+}
+
+/* ========================================================
+                        right_Side 
+=========================================================== */
+.container-resume .right-side {
+  position: relative;
+  background: var(--bg-white);
+  padding: 40px 30px;
+}
+.about {
+  margin-bottom: 50px;
+}
+.about:last-child {
+  margin-bottom: 0;
+}
+.title2 {
+  color: var(--text-dark-blue);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+p {
+  color: var(--text-dark);
+}
+.about .box {
+  /* display: flex; */
+  /* flex-direction: row; */
+  margin: 20px 0;
+}
+.about .box .year-compony {
+  /* min-width: 150px; */
+}
+.about .box .year-compony h5 {
+  text-transform: uppercase;
+  color: var(--text-gray);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.about .box .text h4 {
+  text-transform: uppercase;
+  color: var(--text-blue-pas);
+  font-size: 1.075rem;
+  font-weight: 700;
+}
+
+/* Skills  */
+.skills .box {
+  position: relative;
+  width: 100%;
+  /* display: grid; */
+  /* grid-template-columns: 150px 1fr; */
+  align-items: center; 
+}
+.skills .box h4 {
+  text-transform: uppercase;
+  color: var(--text-gray-2);
+  font-size: 1.075rem;
+  font-weight: 500;
+}
+.skills .box .percent {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: var(--bg-light);
+}
+.skills .box .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--bg-blue);
+}
+
+/* interes */
+
+.interest .row{
+  color: var(--text-dark);
+  font-weight: 500;
+  margin: 10px 0;
+}
+.interest .row .fas{
+  color: var(--text-blue);
+  font-size: 18px;
+  width: 20px;
+  margin-right: 10px;
+}
+
