@@ -203,6 +203,7 @@ body {
 }
 p {
   color: var(--text-dark);
+  line-height: 2rem;
 }
 .about .box {
   /* display: flex; */
@@ -217,6 +218,7 @@ p {
   color: var(--text-gray);
   font-size: 0.875rem;
   font-weight: 600;
+  line-height: 1.25rem;
 }
 .about .box .text h4 {
   text-transform: uppercase;
